@@ -19,4 +19,13 @@
     <string name="repeat_your_password">Repeat your password</string>
     <string name="already_have_an_account_sign_in">Already have an account? Sign in</string>
     <string name="storybook">Storybook</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="library">Library</string>
+    <string name="upgrade">Upgrade</string>
+    <string name="explore">Explore</string>
+    <string name="books">Books</string>
+    <string name="audio">Audio</string>
+    <string name="video">Video</string>
+    <string name="top_rated">Top rated</string>
 </resources>

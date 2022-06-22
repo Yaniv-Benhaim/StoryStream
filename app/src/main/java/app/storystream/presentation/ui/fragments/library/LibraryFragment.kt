@@ -1,15 +1,15 @@
-package app.storystream.presentation.ui.fragments.dashboard
+package app.storystream.presentation.ui.fragments.library
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import app.storystream.databinding.FragmentDashboardBinding
+import app.storystream.databinding.FragmentLibraryBinding
 
-class DashboardFragment : Fragment() {
 
-    private var _binding: FragmentDashboardBinding? = null
+class LibraryFragment : Fragment() {
+    private var _binding: FragmentLibraryBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -18,7 +18,7 @@ class DashboardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+        _binding = FragmentLibraryBinding.inflate(inflater, container, false)
         return binding.root
     }
 

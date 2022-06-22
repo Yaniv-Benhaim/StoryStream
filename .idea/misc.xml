@@ -3,15 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/category_bg_default.xml" value="0.1775" />
+        <entry key="app/src/main/res/drawable/category_bg_selected.xml" value="0.1235" />
         <entry key="app/src/main/res/drawable/edit_text_background.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/edit_text_default.xml" value="0.1025" />
         <entry key="app/src/main/res/drawable/edit_text_focussed.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/gradient_style.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/navigation_item_selector.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_explore.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.22592592592592592" />
+        <entry key="app/src/main/res/layout/fragment_library.xml" value="0.2791666666666667" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_register.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_upgrade.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragmewnt.xml" value="0.29375" />
+        <entry key="app/src/main/res/layout/item_audio_story.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/item_book.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/item_category.xml" value="0.5342465753424658" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.2515625" />
       </map>
     </option>
   </component>

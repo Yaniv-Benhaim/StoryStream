@@ -1,15 +1,16 @@
-package app.storystream.presentation.ui.fragments.notifications
+package app.storystream.presentation.ui.fragments.explore
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import app.storystream.databinding.FragmentNotificationsBinding
+import app.storystream.databinding.FragmentExploreBinding
 
-class NotificationsFragment : Fragment() {
 
-    private var _binding: FragmentNotificationsBinding? = null
+class ExploreFragment : Fragment() {
+
+    private var _binding: FragmentExploreBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -18,7 +19,7 @@ class NotificationsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+        _binding = FragmentExploreBinding.inflate(inflater, container, false)
         return binding.root
     }
 

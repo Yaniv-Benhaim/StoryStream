@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="15dp"
+        android:layout_width="140dp"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/ivThumbnail"
+            android:src="@drawable/book_thumb"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@color/trans_black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                app:layout_constraintTop_toTopOf="parent"
+                android:ellipsize="none"
+                android:text="Abduction"
+                android:gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/tvSubTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:text="A story to keep you up at night and never forget. No more"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:textSize="12sp"
+                android:maxLines="4"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <ImageView
+                android:id="@+id/ivClock"
+                android:src="@drawable/clock"
+                app:layout_constraintTop_toTopOf="@id/ivType"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/ivType"
+                android:layout_marginStart="10dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                app:layout_constraintTop_toTopOf="@id/ivClock"
+                app:layout_constraintBottom_toBottomOf="@id/ivClock"
+                app:layout_constraintStart_toEndOf="@id/ivClock"
+                android:ellipsize="end"
+                android:text="5 min"
+                android:layout_marginStart="5dp"
+                android:textSize="12sp"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <ImageView
+                android:id="@+id/ivType"
+                android:src="@drawable/ic_book"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:tint="@color/white" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -84,18 +84,103 @@
             <!--CATEGORY SECTION-->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvCategories"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
                 app:layout_constraintTop_toBottomOf="@id/actionBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-    <Button
-        android:id="@+id/btnSignOut"
-        android:visibility="gone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sign out"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <!--NEW STORIES-->
+
+            <TextView
+                android:id="@+id/tvNewStories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:text="New stories"
+                app:layout_constraintTop_toBottomOf="@id/rvCategories"
+                android:layout_marginStart="20dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvNewStories"
+                app:layout_constraintTop_toBottomOf="@id/tvNewStories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                app:layout_constraintTop_toBottomOf="@id/rvNewStories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabTextColor="@color/white"
+                android:layout_marginTop="30dp"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorColor="@color/error_red"
+                app:tabSelectedTextColor="@color/error_red"
+                android:background="@color/black">
+
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/books"
+                    />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/audio"
+                    />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/video"
+                    />
+
+        </com.google.android.material.tabs.TabLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSelectedMediaType"
+                app:layout_constraintTop_toBottomOf="@id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvTopRated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:text="@string/top_rated"
+                app:layout_constraintTop_toBottomOf="@id/rvSelectedMediaType"
+                android:layout_marginStart="20dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTopRated"
+                app:layout_constraintTop_toBottomOf="@id/tvTopRated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <View
+                app:layout_constraintTop_toBottomOf="@id/rvTopRated"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"/>
+
+            <Button
+                android:id="@+id/btnSignOut"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign out"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

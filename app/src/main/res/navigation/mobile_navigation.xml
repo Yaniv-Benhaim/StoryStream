@@ -16,16 +16,16 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="app.storystream.presentation.ui.fragments.dashboard.DashboardFragment"
+        android:id="@+id/navigation_explore"
+        android:name="app.storystream.presentation.ui.fragments.explore.ExploreFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_explore" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="app.storystream.presentation.ui.fragments.notifications.NotificationsFragment"
+        android:name="app.storystream.presentation.ui.fragments.upgrade.UpgradeFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_upgrade" />
     <fragment
         android:id="@+id/loginFragment"
         android:name="app.storystream.presentation.ui.fragments.login.LoginFragment"
@@ -48,4 +48,9 @@
             android:id="@+id/action_registerFragment_to_navigation_home"
             app:destination="@id/navigation_home" />
     </fragment>
+    <fragment
+        android:id="@+id/navigation_library"
+        android:name="app.storystream.presentation.ui.fragments.library.LibraryFragment"
+        android:label="fragment_library"
+        tools:layout="@layout/fragment_library" />
 </navigation>
