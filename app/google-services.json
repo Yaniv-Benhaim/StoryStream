@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "233593241063",
+    "project_id": "storystream-d84a2",
+    "storage_bucket": "storystream-d84a2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:233593241063:android:b95f715b325f5361d2d142",
+        "android_client_info": {
+          "package_name": "app.storystream"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "233593241063-k25u0jvp0aup2rr2k62uijoroh5orgvp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_ktw2TnVD4YgY3S7-q6D0SCz-WUmawn8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "233593241063-k25u0jvp0aup2rr2k62uijoroh5orgvp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
