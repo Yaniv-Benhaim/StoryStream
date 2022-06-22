@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/black"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -137,6 +138,39 @@
         android:background="@drawable/edit_text_background"/>
 
     <TextView
+        android:id="@+id/tvEmailError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Please enter a correct email address"
+        app:layout_constraintTop_toBottomOf="@id/etEmail"
+        android:textSize="12sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/error_red"
+        app:layout_constraintStart_toStartOf="@id/etEmail"
+        app:layout_constraintEnd_toEndOf="@id/etEmail"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/emailCheck"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:visibility="gone"
+        android:contentDescription="@string/back_button"
+        android:background="@drawable/edit_text_default"
+        app:layout_constraintTop_toTopOf="@id/etEmail"
+        app:layout_constraintEnd_toEndOf="@id/etEmail"
+        app:layout_constraintBottom_toBottomOf="@id/etEmail"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:src="@drawable/ic_check"
+            app:tint="@color/white"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/password"
@@ -151,7 +185,7 @@
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintTop_toBottomOf="@id/etEmail"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
@@ -162,6 +196,39 @@
         android:hint="@string/enter_your_password"
         android:textColorHint="@color/extra_light_gray"
         android:background="@drawable/edit_text_background"/>
+
+    <TextView
+        android:id="@+id/tvPasswordError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Your password is to short"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        android:textSize="12sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/error_red"
+        app:layout_constraintStart_toStartOf="@id/etEmail"
+        app:layout_constraintEnd_toEndOf="@id/etEmail"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/passwordCheck"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="@string/back_button"
+        android:visibility="gone"
+        android:background="@drawable/edit_text_default"
+        app:layout_constraintTop_toTopOf="@id/etPassword"
+        app:layout_constraintEnd_toEndOf="@id/etPassword"
+        app:layout_constraintBottom_toBottomOf="@id/etPassword"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:src="@drawable/ic_check"
+            app:tint="@color/white"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:layout_width="0dp"
@@ -178,7 +245,7 @@
         android:id="@+id/etRepeatPassword"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintTop_toBottomOf="@id/etPassword"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
@@ -191,7 +258,40 @@
         android:background="@drawable/edit_text_background"/>
 
     <TextView
-        android:id="@+id/btnLogin"
+        android:id="@+id/tvRepeatPasswordError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Your passwords don't match"
+        app:layout_constraintTop_toBottomOf="@id/etRepeatPassword"
+        android:textSize="12sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/error_red"
+        app:layout_constraintStart_toStartOf="@id/etEmail"
+        app:layout_constraintEnd_toEndOf="@id/etEmail"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/passwordRepeatCheck"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="@string/back_button"
+        android:background="@drawable/edit_text_default"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/etRepeatPassword"
+        app:layout_constraintEnd_toEndOf="@id/etRepeatPassword"
+        app:layout_constraintBottom_toBottomOf="@id/etRepeatPassword"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:src="@drawable/ic_check"
+            app:tint="@color/white"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@drawable/gradient_style"
@@ -199,16 +299,16 @@
         android:layout_marginEnd="20dp"
         android:textColor="@color/white"
         android:gravity="center"
-        android:text="@string/log_in"
+        android:text="@string/register"
         android:textAllCaps="false"
         android:textStyle="bold"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/etRepeatPassword"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="40dp"/>
 
     <TextView
         android:id="@+id/btnHaveAccount"
-        app:layout_constraintTop_toBottomOf="@id/btnLogin"
+        app:layout_constraintTop_toBottomOf="@id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -216,7 +316,19 @@
         android:layout_marginTop="20dp"
         android:textColor="@color/extra_light_gray"
         android:gravity="center"
-        android:text="@string/dont_have_account"/>
+        android:text="@string/already_have_an_account_sign_in"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loadingView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:lottie_rawRes="@raw/loading"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

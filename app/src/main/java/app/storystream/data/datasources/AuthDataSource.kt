@@ -1,12 +1,19 @@
 package app.storystream.data.datasources
 
-import androidx.lifecycle.LiveData
-import app.storystream.data.results.LoginResult
 import app.storystream.domain.screenstates.LoginScreenState
+import app.storystream.domain.screenstates.RegisterScreenState
 
 interface AuthDataSource {
 
-    fun signInWithEmailAndPassword(email: String, password: String) : LiveData<LoginScreenState>
+    //Sign in
+    suspend fun signInWithEmailAndPassword(email: String, password: String) : LoginScreenState
 
-    fun signOut() : Boolean
+    fun signOut()
+
+    //Register
+    suspend fun createUserWithEmailAndPassword(email: String, password: String, repeatPassword: String) : RegisterScreenState
+
+    fun validateRepeatPassword(password: String, repeatPassword: String) : RegisterScreenState
+
+    suspend fun isSignedIn() : Boolean
 }

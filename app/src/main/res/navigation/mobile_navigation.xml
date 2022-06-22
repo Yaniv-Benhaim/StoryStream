@@ -5,6 +5,10 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@id/loginFragment">
 
+    <action
+        android:id="@+id/action_global_to_loginFragment"
+        app:destination="@id/loginFragment" />
+
     <fragment
         android:id="@+id/navigation_home"
         android:name="app.storystream.presentation.ui.fragments.home.HomeFragment"
@@ -29,6 +33,9 @@
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -37,5 +44,8 @@
         <action
             android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
     </fragment>
 </navigation>

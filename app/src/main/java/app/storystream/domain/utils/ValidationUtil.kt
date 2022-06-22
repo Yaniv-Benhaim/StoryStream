@@ -21,6 +21,22 @@ object ValidationUtil {
     }
 
     fun validatePassword(password: String) : PasswordStatus {
+        if (password.isBlank()) {
+            return PasswordStatus.BLANK
+        }
+        if(password.length < 6) {
+            return PasswordStatus.TO_SHORT
+        }
+        return PasswordStatus.GOOD
+    }
+
+    fun validateRepeatPassword(password: String, repeatPassword: String) : PasswordStatus {
+        if (password != repeatPassword) {
+            return PasswordStatus.NO_MATCH
+        }
+        if (password.isBlank() || repeatPassword.isBlank()) {
+            return PasswordStatus.BLANK
+        }
         return PasswordStatus.GOOD
     }
 }

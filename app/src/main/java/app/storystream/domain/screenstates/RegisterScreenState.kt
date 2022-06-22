@@ -1,8 +1,8 @@
 package app.storystream.domain.screenstates
 
-data class LoginScreenState(
+data class RegisterScreenState(
     var successful: Boolean = false,
     var emailErrorMessage: String? = null,
     var passwordErrorMessage: String? = null,
-    var invalidUserError: String? = null
+    var repeatPasswordErrorMessage: String? = null
 )

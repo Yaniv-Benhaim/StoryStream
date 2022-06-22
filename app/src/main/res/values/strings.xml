@@ -8,7 +8,7 @@
     <string name="password">Password</string>
     <string name="enter_your_password">Enter your password</string>
     <string name="log_in_with_one_of_the_following_options">Log in with one of the following options.</string>
-    <string name="log_in">Log in</string>
+    <string name="log_in">Sign in</string>
     <string name="dont_have_account">Don\'t have an account? Sign up</string>
     <string name="back_button">back button</string>
     <string name="sign_in_with_google_button">Sign in with google button</string>
@@ -17,4 +17,6 @@
     <string name="register_with_one_of_the_following_options">Register with one of the following options.</string>
     <string name="repeat_password">Repeat password</string>
     <string name="repeat_your_password">Repeat your password</string>
+    <string name="already_have_an_account_sign_in">Already have an account? Sign in</string>
+    <string name="storybook">Storybook</string>
 </resources>
