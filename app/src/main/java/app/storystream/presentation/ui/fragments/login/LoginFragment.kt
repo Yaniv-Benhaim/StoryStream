@@ -122,8 +122,4 @@ class LoginFragment : Fragment(R.layout.fragment_login), View.OnClickListener {
         }
     }
 
-    override fun onStart() {
-        super.onStart()
-        loginViewModel.isSignedIn()
-    }
 }

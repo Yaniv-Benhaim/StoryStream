@@ -1,6 +1,6 @@
 package app.storystream.data.use_cases
 
-import app.storystream.data.repositories.AuthRepository
+import app.storystream.domain.repositories.AuthRepository
 
 class IsLoggedInUseCase(private val authRepository: AuthRepository) {
 

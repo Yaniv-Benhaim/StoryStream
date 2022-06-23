@@ -1,4 +1,4 @@
-package app.storystream.data.repositories
+package app.storystream.domain.repositories
 
 import app.storystream.data.datasources.AuthDataSource
 
