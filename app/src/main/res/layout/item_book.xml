@@ -31,17 +31,18 @@
                 android:id="@+id/tvTitle"
                 app:layout_constraintTop_toTopOf="parent"
                 android:ellipsize="none"
-                android:text="Abduction"
+                android:text="Abductiocdcsc sad asd a sd n"
                 android:gravity="center"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginTop="20dp"
                 android:textStyle="bold"
+                android:visibility="gone"
                 android:textSize="18sp"
                 android:textColor="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:singleLine="true" />
+                android:maxLines="2" />
 
             <TextView
                 android:id="@+id/tvSubTitle"
@@ -49,9 +50,10 @@
                 android:ellipsize="end"
                 android:gravity="center"
                 android:text="A story to keep you up at night and never forget. No more"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 android:textSize="12sp"
                 android:maxLines="4"
                 android:textColor="@color/white"
@@ -59,24 +61,25 @@
                 android:layout_height="wrap_content"
                 />
 
+
             <ImageView
                 android:id="@+id/ivClock"
-                android:src="@drawable/clock"
-                app:layout_constraintTop_toTopOf="@id/ivType"
+                android:src="@drawable/ic_book"
+                android:layout_marginBottom="20dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="@id/ivType"
+                app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_marginStart="10dp"
                 android:layout_width="15dp"
                 android:layout_height="15dp"
                 app:tint="@color/white" />
 
             <TextView
-                android:id="@+id/tvTime"
+                android:id="@+id/tvCategory"
                 app:layout_constraintTop_toTopOf="@id/ivClock"
                 app:layout_constraintBottom_toBottomOf="@id/ivClock"
                 app:layout_constraintStart_toEndOf="@id/ivClock"
                 android:ellipsize="end"
-                android:text="5 min"
+                android:text="Adventure"
                 android:layout_marginStart="5dp"
                 android:textSize="12sp"
                 android:maxLines="1"
@@ -86,16 +89,7 @@
                 android:layout_height="wrap_content"
                 />
 
-            <ImageView
-                android:id="@+id/ivType"
-                android:src="@drawable/ic_book"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                app:tint="@color/white" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

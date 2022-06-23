@@ -23,7 +23,7 @@ class LocalDataSourceImpl @Inject constructor(private val bookDao: BookDao) : Lo
         return bookDao.getAll()
     }
 
-    override suspend fun getBooksByCategory(categories: Categories): LiveData<List<Book>> {
+    override suspend fun getBooksByCategory(categories: String): LiveData<List<Book>> {
         val allBooks = bookDao.getAll().value
         val mutableBooks = MutableLiveData<List<Book>>()
         val filteredBooks: LiveData<List<Book>> = mutableBooks

@@ -34,6 +34,7 @@ class MediaViewModel @Inject constructor(
     fun getAllBooksNetworkRequest() = viewModelScope.launch {
         val books = getAllBooksUseCase.invoke()
         if (books.isNotEmpty()) {
+            _allBooks.value = books
             saveBooksToLocalDatabase(books)
         }
     }
@@ -43,16 +44,7 @@ class MediaViewModel @Inject constructor(
     }
 
     fun getBooksByCategory(category: String) = viewModelScope.launch {
-        when(category) {
-            Categories.FANTASY.name -> _filteredBooks.value = getBooksByCategoryUseCase.invoke(Categories.FANTASY).value
-            Categories.ALIENS.name -> _filteredBooks.value = getBooksByCategoryUseCase.invoke(Categories.ALIENS).value
-            Categories.SCARY.name -> _filteredBooks.value = getBooksByCategoryUseCase.invoke(Categories.SCARY).value
-            Categories.SCIENCE_FICTION.name -> _filteredBooks.value = getBooksByCategoryUseCase.invoke(Categories.SCIENCE_FICTION).value
-            Categories.ROMANCE.name -> _filteredBooks.value = getBooksByCategoryUseCase.invoke(Categories.ROMANCE).value
-            Categories.TRUE_STORIES.name -> _filteredBooks.value = getBooksByCategoryUseCase.invoke(Categories.TRUE_STORIES).value
-            Categories.THRILLER.name -> _filteredBooks.value = getBooksByCategoryUseCase.invoke(Categories.THRILLER).value
-            Categories.MYSTERY.name -> _filteredBooks.value = getBooksByCategoryUseCase.invoke(Categories.MYSTERY).value
-        }
+        _filteredBooks.value = getBooksByCategoryUseCase.invoke(category).value
     }
 
     private fun saveBooksToLocalDatabase(books: List<Book>) = viewModelScope.launch {

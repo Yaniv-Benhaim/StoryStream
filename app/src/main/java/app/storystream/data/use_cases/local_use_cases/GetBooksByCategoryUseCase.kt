@@ -5,6 +5,6 @@ import app.storystream.domain.repositories.MediaRepository
 
 class GetBooksByCategoryUseCase(private val mediaRepository: MediaRepository) {
 
-    suspend operator fun invoke(category: Categories) = mediaRepository.getBooksByCategory(category)
+    suspend operator fun invoke(category: String) = mediaRepository.getBooksByCategory(category)
 
 }

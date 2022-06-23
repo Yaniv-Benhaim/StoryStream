@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".presentation.ui.fragments.home.HomeFragment">
+    tools:context=".presentation.ui.fragments.core.home.HomeFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -183,8 +183,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
     </ScrollView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,7 +12,7 @@ interface LocalDataSource {
 
     suspend fun getAllBooks(): LiveData<List<Book>>
 
-    suspend fun getBooksByCategory(categories: Categories) : LiveData<List<Book>>
+    suspend fun getBooksByCategory(categories: String) : LiveData<List<Book>>
 
     suspend fun remove(book: Book)
 

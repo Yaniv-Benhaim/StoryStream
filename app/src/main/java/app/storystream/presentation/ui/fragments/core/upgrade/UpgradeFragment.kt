@@ -1,4 +1,4 @@
-package app.storystream.presentation.ui.fragments.upgrade
+package app.storystream.presentation.ui.fragments.core.upgrade
 
 import android.os.Bundle
 import android.view.LayoutInflater

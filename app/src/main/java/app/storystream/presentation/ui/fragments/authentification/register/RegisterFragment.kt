@@ -1,4 +1,4 @@
-package app.storystream.presentation.ui.fragments.register
+package app.storystream.presentation.ui.fragments.authentification.register
 
 import android.graphics.Color
 import android.graphics.Typeface

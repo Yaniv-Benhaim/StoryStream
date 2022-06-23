@@ -28,7 +28,7 @@ class AuthViewModel @Inject constructor(
     private val _registerScreenState = MutableLiveData<RegisterScreenState>()
     val registerScreenState: LiveData<RegisterScreenState> = _registerScreenState
 
-    private val _isLoggedIn = MutableLiveData(false)
+    private val _isLoggedIn = MutableLiveData<Boolean>()
     val isLoggedIn: LiveData<Boolean> = _isLoggedIn
 
     fun signInWithEmailAndPassword(email: String, password: String) = viewModelScope.launch {

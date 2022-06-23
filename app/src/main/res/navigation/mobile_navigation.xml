@@ -9,26 +9,32 @@
         android:id="@+id/action_global_to_loginFragment"
         app:destination="@id/loginFragment" />
 
+    <action
+        android:id="@+id/action_global_to_readingFragment"
+        app:destination="@id/readingFragment" />
+
     <fragment
         android:id="@+id/navigation_home"
-        android:name="app.storystream.presentation.ui.fragments.home.HomeFragment"
+        android:name="app.storystream.presentation.ui.fragments.core.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_explore"
-        android:name="app.storystream.presentation.ui.fragments.explore.ExploreFragment"
+        android:name="app.storystream.presentation.ui.fragments.core.explore.ExploreFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_explore" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="app.storystream.presentation.ui.fragments.upgrade.UpgradeFragment"
+        android:name="app.storystream.presentation.ui.fragments.core.upgrade.UpgradeFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_upgrade" />
+
     <fragment
         android:id="@+id/loginFragment"
-        android:name="app.storystream.presentation.ui.fragments.login.LoginFragment"
+        android:name="app.storystream.presentation.ui.fragments.authentification.login.LoginFragment"
         android:label="LoginFragment" >
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
@@ -39,7 +45,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="app.storystream.presentation.ui.fragments.register.RegisterFragment"
+        android:name="app.storystream.presentation.ui.fragments.authentification.register.RegisterFragment"
         android:label="RegisterFragment" >
         <action
             android:id="@+id/action_registerFragment_to_loginFragment"
@@ -50,7 +56,7 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_library"
-        android:name="app.storystream.presentation.ui.fragments.library.LibraryFragment"
+        android:name="app.storystream.presentation.ui.fragments.core.library.LibraryFragment"
         android:label="fragment_library"
         tools:layout="@layout/fragment_library" />
     <fragment
@@ -64,5 +70,17 @@
         <action
             android:id="@+id/action_splashFragment_to_navigation_home"
             app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/readingFragment"
+        android:name="app.storystream.presentation.ui.fragments.details.reader.ReadingFragment"
+        android:label="fragment_reading"
+        tools:layout="@layout/fragment_reading" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="story"
+            app:argType="string" />
     </fragment>
 </navigation>

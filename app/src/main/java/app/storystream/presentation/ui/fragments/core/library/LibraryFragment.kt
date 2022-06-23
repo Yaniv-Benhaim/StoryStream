@@ -1,4 +1,4 @@
-package app.storystream.presentation.ui.fragments.library
+package app.storystream.presentation.ui.fragments.core.library
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

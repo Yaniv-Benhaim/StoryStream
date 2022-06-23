@@ -15,7 +15,7 @@ class MediaRepository @Inject constructor(
 
     suspend fun getAllLocalBooks() = localDataSourceImpl.getAllBooks()
 
-    suspend fun getBooksByCategory(categories: Categories) = localDataSourceImpl.getBooksByCategory(categories)
+    suspend fun getBooksByCategory(categories: String) = localDataSourceImpl.getBooksByCategory(categories)
 
     suspend fun insertBooks(books: List<Book>) = localDataSourceImpl.insertAll(books)
 

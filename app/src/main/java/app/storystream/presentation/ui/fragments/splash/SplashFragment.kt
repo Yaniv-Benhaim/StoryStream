@@ -1,6 +1,7 @@
 package app.storystream.presentation.ui.fragments.splash
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import app.storystream.R
 import app.storystream.databinding.FragmentLibraryBinding
 import app.storystream.databinding.FragmentSplashBinding
+import app.storystream.domain.utils.Constants.MINIMUM_DATA_SIZE
 import app.storystream.domain.viewmodels.AuthViewModel
 import app.storystream.domain.viewmodels.MediaViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -36,8 +38,12 @@ class SplashFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         subscribeToObservers()
-        //mediaViewModel.getAllBooksNetworkRequest()
-        loginViewModel.isSignedIn()
+        initializeData()
+    }
+
+    private fun initializeData() {
+        mediaViewModel.getAllBooksNetworkRequest()
+        mediaViewModel.getAllBooksFromLocalStorage()
     }
 
     private fun subscribeToObservers() {
@@ -46,6 +52,14 @@ class SplashFragment : Fragment() {
                 loginSuccessful()
             } else {
                 loginUnSuccessful()
+            }
+        }
+
+        mediaViewModel.allBooks.observe(viewLifecycleOwner) {
+            if(it != null) {
+                if (it.size > MINIMUM_DATA_SIZE) {
+                    loginViewModel.isSignedIn()
+                }
             }
         }
     }

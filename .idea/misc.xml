@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.13752122241086587" />
         <entry key="app/src/main/res/drawable/category_bg_default.xml" value="0.1775" />
         <entry key="app/src/main/res/drawable/category_bg_selected.xml" value="0.1235" />
         <entry key="app/src/main/res/drawable/edit_text_background.xml" value="0.1515" />
@@ -12,9 +13,10 @@
         <entry key="app/src/main/res/drawable/navigation_item_selector.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment_explore.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.22592592592592592" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_library.xml" value="0.2791666666666667" />
-        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.21481481481481482" />
+        <entry key="app/src/main/res/layout/fragment_reading.xml" value="0.2265625" />
         <entry key="app/src/main/res/layout/fragment_register.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.25625" />
         <entry key="app/src/main/res/layout/fragment_upgrade.xml" value="0.1" />
